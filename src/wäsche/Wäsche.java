@@ -23,7 +23,7 @@ public class Wäsche {
         
         Leinenraum meinRaum = new Leinenraum(6);
         
-        meinRaum.getWäscheleine(3).setPerson(max);
+        meinRaum.getWäscheleine(3).WäscheAufhängen(max);
         System.out.println("Belegt: " + meinRaum.getWäscheleine(3).getBelegt());
         
     }

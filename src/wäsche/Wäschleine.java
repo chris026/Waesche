@@ -31,11 +31,20 @@ public class Wäschleine {
         return person;
     }
     
-    boolean setPerson(Person person) {
+    boolean WäscheAufhängen(Person person) {
         if (getBelegt()) {
             return false;
         } else {
             this.person = person;
+            return true;
+        }
+    }
+    
+    boolean WäscheAbhängen() {
+        if (person == null) {
+            return false;
+        } else {
+            person = null;
             return true;
         }
     }
