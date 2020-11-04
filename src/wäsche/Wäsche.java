@@ -17,14 +17,30 @@ public class Wäsche {
     /**
      * @param args the command line arguments
      */
+    
+    private static final int LEINEN_ANZAHL = 2*2*5;
+    
     public static void main(String[] args) {
+        Leinenraum meinRaum = new Leinenraum(LEINEN_ANZAHL);
+        
+        Person[] allePersonen = new Person[20];
+        for(int i = 0; i < allePersonen.length; i++) {
+            allePersonen[i] = new Person(String.valueOf(i), LocalDate.of(1998, Month.JANUARY, i+1), i);
+        }
         
         Person max = new Person("Max", LocalDate.of(2000, Month.JANUARY, 1), 101);
         
-        Leinenraum meinRaum = new Leinenraum(6);
-        
         meinRaum.getWäscheleine(3).WäscheAufhängen(max);
-        System.out.println("Belegt: " + meinRaum.getWäscheleine(3).getBelegt());
+        System.out.println("Vorname: " + meinRaum.getWäscheleine(3).getPerson().getVorname());
         
+        JDOMWriter writer = new JDOMWriter();
+        writer.createDoc();
+        writer.personHinzufügen(max);
+        
+        for(int i = 0; i < allePersonen.length; i++) {
+            writer.personHinzufügen(allePersonen[i]);
+        }
+        
+        writer.writeXML();
     }
 }
