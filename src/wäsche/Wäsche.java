@@ -19,11 +19,11 @@ public class Wäsche {
      */
     public static void main(String[] args) {
         
-        Person christian = new Person("Max", LocalDate.of(2000, Month.JANUARY, 1), 101);
+        Person max = new Person("Max", LocalDate.of(2000, Month.JANUARY, 1), 101);
         
         Leinenraum meinRaum = new Leinenraum(6);
         
-        meinRaum.getWäscheleine(3).setPerson(christian);
+        meinRaum.getWäscheleine(3).setPerson(max);
         System.out.println("Belegt: " + meinRaum.getWäscheleine(3).getBelegt());
         
     }
