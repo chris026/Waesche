@@ -19,7 +19,7 @@ public class Wäsche {
      */
     public static void main(String[] args) {
         
-        Person max = new Person("Max", LocalDate.of(2000, Month.JANUARY, 2), 101);
+        Person max = new Person("Max", LocalDate.of(2000, Month.JANUARY, 1), 101);
         
         Leinenraum meinRaum = new Leinenraum(6);
         
