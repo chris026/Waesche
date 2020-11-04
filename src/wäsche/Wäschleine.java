@@ -23,6 +23,10 @@ public class Wäschleine {
         return nummer;
     }
     
+    int zahl() {
+        return 1;
+    }
+    
     boolean getBelegt() {
         return person != null;
     }
